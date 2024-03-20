@@ -1,0 +1,27 @@
+on:
+  - push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello"
+  setup:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello"
+  sast:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello"
+  plan:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello"
+  apply:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello"
+  docker:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello"
