@@ -26,7 +26,13 @@ jobs:
     steps: 
       - run: echo "Hello"
   docker:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello"
+  trivy:
     needs: setup
     runs-on: ubuntu-latest
     steps: 
       - run: echo "Hello"
+
+  
