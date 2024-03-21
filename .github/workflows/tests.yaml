@@ -1,0 +1,20 @@
+name: checkov
+on: 
+  workflow_call:
+  
+jobs: 
+
+  scan: 
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+    runs-on: ubuntu-latest
+    steps: 
+    - name: checkov Github Action
+      uses: bridgecrewio/checkov-action@12
+      with: 
+        output_format: cli,sarif
+        output_file_path: console,results.sarif
+  
+    
