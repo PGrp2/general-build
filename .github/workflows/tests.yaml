@@ -3,12 +3,7 @@ on:
   workflow_call:
   
 jobs: 
-
   scan: 
-    permissions:
-      contents: read
-      security-events: write
-      actions: read
     runs-on: ubuntu-latest
     steps: 
       - name: Download artifacts
