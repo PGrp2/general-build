@@ -8,7 +8,7 @@ jobs:
   startup:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo"hello"
+      - run: echo "hello"
   setup:
     needs: [ build, docker, startup ]
     runs-on: ubuntu-latest
