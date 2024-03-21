@@ -17,6 +17,7 @@ jobs:
       - run: echo "Hello"
   plan:
     needs: checkov
+    if: success()
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -38,9 +39,16 @@ jobs:
     steps: 
       - run: echo "Hello"
   trivy:
-    needs: setup
+    needs: [ docker, setup ]
     runs-on: ubuntu-latest
     steps: 
       - run: echo "Hello"
+  dockerise:
+    needs: trivy
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "hello"
+    
 
   
