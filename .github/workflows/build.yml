@@ -16,7 +16,7 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "Hello"
+      - run: terraform fmt -check
   plan:
     needs: checkov
     if: success()
